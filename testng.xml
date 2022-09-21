@@ -9,36 +9,36 @@
                     <include name="TestCase001_HomePage"/>
                 </methods>
             </class>
-            <class name="com.chainpal.TestCases.TC02_Login">
-                <methods>
-                    <include name="TestCase002_UserLogin"/>
-                </methods>
-            </class>
-            <class name="com.chainpal.TestCases.TC03_Forgot">
-                <methods>
-                    <include name="TestCase003_Forgot"/>
-                </methods>
-            </class>
-            <class name="com.chainpal.TestCases.TC05_Dashboard">
-                <methods>
-                    <include name="TestCase005_Dashboard"/>
-                </methods>
-            </class>
-            <class name="com.chainpal.TestCases.TC06_Token">
-                <methods>
-                    <include name="TestCase006_TokenDashboard"/>
-                </methods>
-            </class>
-            <class name="com.chainpal.TestCases.TC07_TransactionSender">
-                <methods>
-                    <include name="TC007_TransactionSender"/>
-                </methods>
-            </class>
-            <class name="com.chainpal.TestCases.TC09_EditProfile">
-                <methods>
-                    <include name="TestCase009_EditProfile"/>
-                </methods>
-            </class>
+<!--            <class name="com.chainpal.TestCases.TC02_Login">-->
+<!--                <methods>-->
+<!--                    <include name="TestCase002_UserLogin"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.chainpal.TestCases.TC03_Forgot">-->
+<!--                <methods>-->
+<!--                    <include name="TestCase003_Forgot"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.chainpal.TestCases.TC05_Dashboard">-->
+<!--                <methods>-->
+<!--                    <include name="TestCase005_Dashboard"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.chainpal.TestCases.TC06_Token">-->
+<!--                <methods>-->
+<!--                    <include name="TestCase006_TokenDashboard"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.chainpal.TestCases.TC07_TransactionSender">-->
+<!--                <methods>-->
+<!--                    <include name="TC007_TransactionSender"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.chainpal.TestCases.TC09_EditProfile">-->
+<!--                <methods>-->
+<!--                    <include name="TestCase009_EditProfile"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 <!--            <class name="com.chainpal.TestCases.TC04_SignUp">-->
 <!--                <methods>-->
 <!--                    <include name="TetCase004_SignUp"/>-->
