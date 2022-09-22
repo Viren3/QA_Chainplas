@@ -33,8 +33,8 @@ public class BaseClass {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addExtensions(new File("./Data/nkbihfbeogaeaoehlefnkodbefgpgknn-10.16.1-Crx4Chrome.com.crx"));
-//        chromeOptions.addArguments("user-data-dir=/Users/Viren/Library/Application Support/Google/Chrome/Profile 1");
-//        chromeOptions.addArguments("--profile-directory= Profile 1");
+        chromeOptions.addArguments("user-data-dir=/Users/Viren/Library/Application Support/Google/Chrome/Profile 1");
+        chromeOptions.addArguments("--profile-directory= Profile 1");
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver(chromeOptions);
         webDriver.manage().window().maximize();
