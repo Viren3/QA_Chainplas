@@ -32,9 +32,9 @@ public class BaseClass {
         String url = propertiesRead.readProperties("URL");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
-        chromeOptions.addExtensions(new File("/Users/Viren/Work/Automation/old_chainpal_automation/chainpal_automation/QA_Chainplas/Data/nkbihfbeogaeaoehlefnkodbefgpgknn-10.16.1-Crx4Chrome.com.crx"));
-        chromeOptions.addArguments("user-data-dir=/Users/Viren/Library/Application Support/Google/Chrome/Profile 1");
-        chromeOptions.addArguments("--profile-directory= Profile 1");
+        chromeOptions.addExtensions(new File("./Data/nkbihfbeogaeaoehlefnkodbefgpgknn-10.16.1-Crx4Chrome.com.crx"));
+//        chromeOptions.addArguments("user-data-dir=/Users/Viren/Library/Application Support/Google/Chrome/Profile 1");
+//        chromeOptions.addArguments("--profile-directory= Profile 1");
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver(chromeOptions);
         webDriver.manage().window().maximize();
@@ -80,7 +80,7 @@ public class BaseClass {
             testDescription = testDescription.replace(" ", "_");
             testDescription = testDescription.replace(":", "_");
             dateEndInString = "SC_error__" + testDescription;
-            fileName = "/Users/Viren/Work/Automation/old_chainpal_automation/chainpal_automation/QA_Chainplas/Reports/Failure_Screenshots/" + dateEndInString + ".png" ;
+            fileName = "./Reports/Failure_Screenshots/" + dateEndInString + ".png" ;
             takeSnapShot(webDriver, fileName);
             ExtentTestManager.getTest().log(LogStatus.FAIL, "Error Screenshot" + ExtentTestManager.getTest().addScreenCapture("failure_screenshots\\" + dateEndInString + ".png"));
             ExtentTestManager.getTest().log(LogStatus.FAIL, result.getThrowable().getMessage());
