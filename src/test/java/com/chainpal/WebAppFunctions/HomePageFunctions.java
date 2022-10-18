@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import com.chainpal.PageObjects.Elm_HomePage;
 
 public class HomePageFunctions extends BaseClass {
     WebDriver webDriver;
@@ -28,6 +29,11 @@ public class HomePageFunctions extends BaseClass {
         String clickOnRoadmap = propertiesRead.readProperties("roadmap");
         String clickOnAbout = propertiesRead.readProperties("about");
         String clickOnUpArrow = propertiesRead.readProperties("scrollUpArrow");
+        String btnTokenDownload = propertiesRead.readProperties("btnTokenDownload");
+        String btnTransactionDownload = propertiesRead.readProperties("btnTransactionDownload");
+        String copyTokenIcon = propertiesRead.readProperties("copyTokenIcon");
+        String copyTransactionIcon = propertiesRead.readProperties("copyTransactionIcon");
+
 
 
         Set<String> w = webDriver.getWindowHandles();
@@ -39,13 +45,44 @@ public class HomePageFunctions extends BaseClass {
         webDriver.switchTo().window(ch);
         /* close the child browser window */
         webDriver.close();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         /* switching parent window */
         webDriver.switchTo().window(pw);
-        Thread.sleep(8000);
+        Thread.sleep(5000);
         webDriver.findElement(By.xpath(clickOnTokenomics)).click();
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Tokenomics", "User should be able to click on Tokenomics.");
         Thread.sleep(1000);
+        JavascriptExecutor jsDown2 = (JavascriptExecutor) webDriver;
+        jsDown2.executeScript("window.scrollBy(0,600)", "");
+        Thread.sleep(1000);
+        webDriver.findElement(By.xpath(btnTokenDownload)).click();
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Token Contract Download", "User should be able to click on Token Contract Download.");
+        Thread.sleep(1000);
+        Set<String> tw = webDriver.getWindowHandles();
+        Set<String> handlesSet_td = webDriver.getWindowHandles();
+        List<String> handlesList_td = new ArrayList<String>(handlesSet_td);
+        webDriver.switchTo().window(handlesList_td.get(1));
+        Thread.sleep(1000);
+        webDriver.close();
+        webDriver.switchTo().window(handlesList_td.get(0));
+        Thread.sleep(1000);
+        webDriver.findElement(By.xpath(btnTransactionDownload)).click();
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Transaction Contract Download", "User should be able to click on Transaction Contract Download.");
+        Thread.sleep(1000);
+        Set<String> dw = webDriver.getWindowHandles();
+        Set<String> handlesSet_tdw = webDriver.getWindowHandles();
+        List<String> handlesList_tdw = new ArrayList<String>(handlesSet_tdw);
+        webDriver.switchTo().window(handlesList_tdw.get(1));
+        Thread.sleep(1000);
+        webDriver.close();
+        webDriver.switchTo().window(handlesList_tdw.get(0));
+        Thread.sleep(1000);
+        webDriver.findElement(By.xpath(copyTokenIcon)).click();
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Copy Icon", "User should be able to copy on Token Contract.");
+        Thread.sleep(1000);
+        webDriver.findElement(By.xpath(copyTransactionIcon)).click();
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Copy Icon", "User should be able to copy on Tansaction Contract.");
+        Thread.sleep(2000);
         webDriver.findElement(By.xpath(clickOnUpArrow)).click();
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on ScollUp Icon", "User should be able to click on ScollUp.");
         Thread.sleep(1500);
@@ -74,9 +111,8 @@ public class HomePageFunctions extends BaseClass {
         String gtxtEmail = propertiesRead.readProperties("gtxtEmail");
         String gtxtDes = propertiesRead.readProperties("gtxtDes");
 
-//        testBase.scrollPage(webDriver.findElement(By.xpath(gScrollDown)));
         JavascriptExecutor jsDown = (JavascriptExecutor) webDriver;
-        jsDown.executeScript("window.scrollBy(0,3000)", "");
+        jsDown.executeScript("window.scrollBy(0,7000)", "");
         Thread.sleep(1500);
         webDriver.findElement(By.xpath(gName)).sendKeys(gtxtName);
         ExtentTestManager.getTest().log(LogStatus.PASS,"Enter Name", "User should be able to enter the name.");
@@ -100,8 +136,9 @@ public class HomePageFunctions extends BaseClass {
         Thread.sleep(1000);
     }
 
-    public void ligtPaperFunction() throws InterruptedException, IOException{
+    public void web3Function() throws InterruptedException, IOException{
         String clicnOnbtnLigtPaper = propertiesRead.readProperties("btnLigtPaper");
+        String btnCreateTxn = propertiesRead.readProperties("btnCreateTxn");
         Thread.sleep(1500);
         webDriver.findElement(By.xpath(clicnOnbtnLigtPaper)).click();
         ExtentTestManager.getTest().log(LogStatus.PASS,"Click on Light Paper Button", "User should be able to click on Light Paper Button.");
@@ -112,8 +149,28 @@ public class HomePageFunctions extends BaseClass {
         List<String> handlesList = new ArrayList<String>(handlesSet);
         webDriver.switchTo().window(handlesList.get(1));
         webDriver.close();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         webDriver.switchTo().window(handlesList.get(0));
+        Thread.sleep(1000);
+        webDriver.findElement(By.xpath(btnCreateTxn)).click();
+        Thread.sleep(1000);
+        webDriver.navigate().back();
+        Thread.sleep(3000);
+        JavascriptExecutor jsDown2 = (JavascriptExecutor) webDriver;
+        jsDown2.executeScript("window.scrollBy(0,650)", "");
+        Thread.sleep(500);
+        webDriver.findElement(By.partialLinkText("View Chainpals Smart Contract")).click();
+        Set<String> w3 = webDriver.getWindowHandles();
+        // window handles iterate
+        Set<String> handlesSet3 = webDriver.getWindowHandles();
+        List<String> handlesList3 = new ArrayList<String>(handlesSet3);
+        webDriver.switchTo().window(handlesList3.get(1));
+        Thread.sleep(3000);
+        webDriver.close();
+        webDriver.switchTo().window(handlesList3.get(0));
+        Thread.sleep(1000);
+        JavascriptExecutor jsDown = (JavascriptExecutor) webDriver;
+        jsDown.executeScript("window.scrollBy(0,-700)", "");
     }
 
     public void partnerFunction() throws IOException, InterruptedException {
@@ -356,7 +413,7 @@ public class HomePageFunctions extends BaseClass {
         Thread.sleep(500);
         webDriver.findElement(By.xpath(newsSubmit)).click();
         ExtentTestManager.getTest().log(LogStatus.PASS,"Click on Submit Button", "User should be able to click on the Submit Button.");
-        webDriver.navigate().back();
         Thread.sleep(500);
     }
+
 }

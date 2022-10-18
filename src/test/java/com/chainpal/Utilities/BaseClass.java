@@ -21,9 +21,6 @@ import java.util.concurrent.TimeUnit;
 public class BaseClass {
 
     public static WebDriver webDriver;
-    public WebDriver getDriver() {
-        return webDriver;
-    }
 
     @BeforeClass
     public void setup() throws IOException {
@@ -32,9 +29,9 @@ public class BaseClass {
         String url = propertiesRead.readProperties("URL");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
-        chromeOptions.addExtensions(new File("./Data/nkbihfbeogaeaoehlefnkodbefgpgknn-10.16.1-Crx4Chrome.com.crx"));
-        chromeOptions.addArguments("user-data-dir=/Users/Viren/Library/Application Support/Google/Chrome/Profile 1");
-        chromeOptions.addArguments("--profile-directory= Profile 1");
+        chromeOptions.addExtensions(new File("/Users/virenchauhan/Work/Auto Web/QA_Chainplas/Data/nkbihfbeogaeaoehlefnkodbefgpgknn-10.19.0-Crx4Chrome.com.crx"));
+        chromeOptions.addArguments("user-data-dir=/Users/virenchauhan/Library/Application Support/Google/Chrome/Profile 3");
+        chromeOptions.addArguments("--profile-directory= Profile 3");
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver(chromeOptions);
         webDriver.manage().window().maximize();

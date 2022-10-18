@@ -17,9 +17,9 @@ public class ExtentManager {
             DateFormat df = new SimpleDateFormat("dd_MMM_yyyy-HH_mm_ss");
             //Set HTML reporting file location
             String workingDir = System.getProperty("user.home");
-            extent = new ExtentReports("./Reports/chainpal_ReportResults_" + df.format(System.currentTimeMillis()) + ".html");
+            extent = new ExtentReports("/Users/virenchauhan/Work/Auto Web/QA_Chainplas/Reports/chainpal_ReportResults_" + df.format(System.currentTimeMillis()) + ".html");
             extent.addSystemInfo("Environment", "Chainpal DEV Environment");
-            extent.loadConfig(new File("./Utilities/ExtendReport/extent-config.xml"));
+            extent.loadConfig(new File("/Users/virenchauhan/Work/Auto Web/QA_Chainplas/src/test/java/com/chainpal/Utilities/ExtendReport/extent-config.xml"));
         }
         return extent;
     }

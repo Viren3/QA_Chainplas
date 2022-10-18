@@ -13,12 +13,12 @@ public class TC01_Home extends BaseClass {
     {
         HomePageFunctions homePageFunctions = new HomePageFunctions(webDriver);
         homePageFunctions.homeFuction();
-//        homePageFunctions.ligtPaperFunction();
-//        homePageFunctions.partnerFunction();
-//        homePageFunctions.escrowFunction();
-//        homePageFunctions.joinWaitlistFunction();
-//        homePageFunctions.getInTouchFunction();
-//        homePageFunctions.newsLetterFunction();
+        homePageFunctions.web3Function();
+        homePageFunctions.partnerFunction();
+        homePageFunctions.escrowFunction();
+        homePageFunctions.joinWaitlistFunction();
+        homePageFunctions.getInTouchFunction();
+        homePageFunctions.newsLetterFunction();
     }
 }
 

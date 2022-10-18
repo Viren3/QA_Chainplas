@@ -4,9 +4,9 @@
 
     <test name="chainpal Smoke Testcases">
         <classes>
-            <class name="com.chainpal.TestCases.TC01_Home">
+            <class name="com.chainpal.TestCases.TC02_Login">
                 <methods>
-                    <include name="TestCase001_HomePage"/>
+                    <include name="TestCase002_UserLogin"/>
                 </methods>
             </class>
 <!--            <class name="com.chainpal.TestCases.TC02_Login">-->
