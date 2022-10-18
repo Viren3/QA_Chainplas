@@ -2,11 +2,11 @@
 Added Testcases for below modules :
 1) Home Page 
 2) Login / Logout
-2) Forgot Password
-3) Signup]
-4) Dashboard
-5) Token
-6) Sender Transaction
-7) Recipient Transaction
-8) Edit Profile
-9) Wallet Connect and Import Wallet
+3) Forgot Password
+4) Signup
+5) Dashboard
+6) Token
+7) Sender Transaction
+8) Recipient Transaction
+9) Edit Profile
+10) Wallet Connect and Import Wallet
