@@ -133,7 +133,7 @@ public class SignUpFunctions extends BaseClass {
         Thread.sleep(10000);
         webDriver.findElement(By.xpath(clickOnNewAc)).click();
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on New Account from the Metamask", "User should be able to click on the New Account option.");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         webDriver.findElement(By.xpath(inputWalltName)).clear();
         ExtentTestManager.getTest().log(LogStatus.PASS, "Clear default account name from the Metamask", "User should be able to Clear default account name.");
         Thread.sleep(2000);
@@ -152,21 +152,21 @@ public class SignUpFunctions extends BaseClass {
         Thread.sleep(7000);
         webDriver.switchTo().window(ch1);
         Thread.sleep(5000);
-        webDriver.findElement(By.xpath(FirstName)).sendKeys("Automation");
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on First Name", "User should be able to entered on First Name.");
-
-        webDriver.findElement(By.xpath(LastName)).sendKeys("Demo");
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on First Name", "User should be able to entered on Last Name.");
-
-        webDriver.findElement(By.xpath(UserName)).sendKeys("AutoDemo");
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on User Name", "User should be able to entered on User Name.");
-
-        webDriver.findElement(By.id(clickOnDropSignup)).click();
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Country Drop Down", "User should be able to click on the Country Drop Down.");
-
-        webDriver.findElement(By.xpath(selectDropValue)).click();
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Select Country from the Country Drop Down", "User should be able to Select Country from the Country Drop Down.");
-        ng.mailFunction();
+//        webDriver.findElement(By.xpath(FirstName)).sendKeys("Automation");
+//        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on First Name", "User should be able to entered on First Name.");
+//
+//        webDriver.findElement(By.xpath(LastName)).sendKeys("Demo");
+//        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on First Name", "User should be able to entered on Last Name.");
+//
+//        webDriver.findElement(By.xpath(UserName)).sendKeys("AutoDemo");
+//        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on User Name", "User should be able to entered on User Name.");
+//
+//        webDriver.findElement(By.id(clickOnDropSignup)).click();
+//        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Country Drop Down", "User should be able to click on the Country Drop Down.");
+//
+//        webDriver.findElement(By.xpath(selectDropValue)).click();
+//        ExtentTestManager.getTest().log(LogStatus.PASS, "Select Country from the Country Drop Down", "User should be able to Select Country from the Country Drop Down.");
+//        ng.mailFunction();
         webDriver.findElement(By.xpath(textBoxEmailAddress)).sendKeys("autodemo@yopmail.com");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Enter on Email ID", "User should be able to entered on Register Email ID.");
 
